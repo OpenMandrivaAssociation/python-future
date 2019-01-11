@@ -1,8 +1,7 @@
 %global pypi_name future
-%define version 0.15.2
 
 Name:           python-future
-Version:        %{version}
+Version:        0.17.1
 Release:        1
 Group:          Development/Python
 Summary:        Clean single-source support for Python 3 and 2
@@ -48,45 +47,44 @@ find %{py2dir} -name '*.py' | xargs sed -i '1s|^#!python|#!%{__python2}|'
 # overwritten with every setup.py install (and we want the python2 version
 # to be the default for now).
 pushd %{py2dir}
-%{__python2} setup.py install --root %{buildroot}
+python setup.py install --root %{buildroot}
 mv %{buildroot}%{_bindir}/futurize %{buildroot}/%{_bindir}/python2-futurize
 mv %{buildroot}%{_bindir}/pasteurize %{buildroot}/%{_bindir}/python2-pasteurize
 popd
 
-%{__python} setup.py install --root %{buildroot}
+python setup.py install --root %{buildroot}
 
 
 %files
 %doc README.rst docs/_themes/LICENSE LICENSE.txt
 %{_bindir}/futurize
 %{_bindir}/pasteurize
-%{python_sitelib}/%{pypi_name}-%{version}-py?.?.egg-info
-%{python_sitelib}/%{pypi_name}
-%{python_sitelib}/past
-%{python_sitelib}/libfuturize
-%{python_sitelib}/libpasteurize
+%{py_puresitedir}/%{pypi_name}-%{version}-py?.?.egg-info
+%{py_puresitedir}/%{pypi_name}
+%{py_puresitedir}/past
+%{py_puresitedir}/libfuturize
+%{py_puresitedir}/libpasteurize
 
 %files -n python2-%{pypi_name}
 %{_bindir}/python2-futurize
 %{_bindir}/python2-pasteurize
 %doc README.rst docs/_themes/LICENSE LICENSE.txt
-%{python2_sitelib}/%{pypi_name}-%{version}-py?.?.egg-info
-%{python2_sitelib}/%{pypi_name}
-%{python2_sitelib}/past
-%{python2_sitelib}/libfuturize
-%{python2_sitelib}/libpasteurize
-%{python2_sitelib}/builtins
-%{python2_sitelib}/configparser
-%{python2_sitelib}/copyreg
-%{python2_sitelib}/html
-%{python2_sitelib}/http
-%{python2_sitelib}/queue
-%{python2_sitelib}/reprlib
-%{python2_sitelib}/socketserver
-%{python2_sitelib}/tkinter
-%{python2_sitelib}/_dummy_thread
-%{python2_sitelib}/_markupbase
-%{python2_sitelib}/_thread
-%{python2_sitelib}/winreg
-%{python2_sitelib}/xmlrpc
-
+%{py_puresitedir}/%{pypi_name}-%{version}-py?.?.egg-info
+%{py_puresitedir}/%{pypi_name}
+%{py_puresitedir}/past
+%{py_puresitedir}/libfuturize
+%{py_puresitedir}/libpasteurize
+%{py_puresitedir}/builtins
+%{py_puresitedir}/configparser
+%{py_puresitedir}/copyreg
+%{py_puresitedir}/html
+%{py_puresitedir}/http
+%{py_puresitedir}/queue
+%{py_puresitedir}/reprlib
+%{py_puresitedir}/socketserver
+%{py_puresitedir}/tkinter
+%{py_puresitedir}/_dummy_thread
+%{py_puresitedir}/_markupbase
+%{py_puresitedir}/_thread
+%{py_puresitedir}/winreg
+%{py_puresitedir}/xmlrpc

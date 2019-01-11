@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   future-0.15.2.tar.gz: 431bf8ff160e8e785a2f76c3e57c1b6c2b13b41a
+sources:
+  future-0.17.1.tar.gz: 7abd068d09c637f4fa5fb2df3d90cc9607523aee
