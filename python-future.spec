@@ -1,8 +1,7 @@
 %global pypi_name future
-%define version 0.15.2
 
 Name:           python-future
-Version:        %{version}
+Version:        0.17.1
 Release:        1
 Group:          Development/Python
 Summary:        Clean single-source support for Python 3 and 2
@@ -76,7 +75,6 @@ popd
 %{python2_sitelib}/libfuturize
 %{python2_sitelib}/libpasteurize
 %{python2_sitelib}/builtins
-%{python2_sitelib}/configparser
 %{python2_sitelib}/copyreg
 %{python2_sitelib}/html
 %{python2_sitelib}/http
