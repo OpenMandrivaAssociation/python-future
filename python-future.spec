@@ -1,13 +1,13 @@
 %global pypi_name future
 
 Name:           python-future
-Version:	0.18.1
+Version:	0.18.2
 Release:	1
 Group:          Development/Python
 Summary:        Clean single-source support for Python 3 and 2
 
 License:        MIT
-Source0:	https://files.pythonhosted.org/packages/3f/bf/57733d44afd0cf67580658507bd11d3ec629612d5e0e432beb4b8f6fbb04/future-0.18.1.tar.gz
+Source0:	https://files.pythonhosted.org/packages/45/0b/38b06fd9b92dc2b68d58b75f900e97884c45bedd2ff83203d933cf5851c9/future-0.18.2.tar.gz
 BuildArch:      noarch
  
 BuildRequires:  python2-devel
