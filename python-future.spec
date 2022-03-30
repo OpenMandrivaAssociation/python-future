@@ -2,12 +2,12 @@
 
 Name:           python-future
 Version:	0.18.2
-Release:	3
+Release:	4
 Group:          Development/Python
 Summary:        Clean single-source support for Python 3 and 2
 
 License:        MIT
-Source0:	https://files.pythonhosted.org/packages/45/0b/38b06fd9b92dc2b68d58b75f900e97884c45bedd2ff83203d933cf5851c9/future-0.18.2.tar.gz
+Source0:	https://files.pythonhosted.org/packages/45/0b/38b06fd9b92dc2b68d58b75f900e97884c45bedd2ff83203d933cf5851c9/future-%{version}.tar.gz
 BuildArch:      noarch
  
 BuildRequires:  python2-devel
@@ -59,7 +59,7 @@ popd
 %doc README.rst docs/_themes/LICENSE LICENSE.txt
 %{_bindir}/futurize
 %{_bindir}/pasteurize
-%{python_sitelib}/%{pypi_name}-%{version}-py?.?.egg-info
+%{python_sitelib}/%{pypi_name}-%{version}-py*.*.egg-info
 %{python_sitelib}/%{pypi_name}
 %{python_sitelib}/past
 %{python_sitelib}/libfuturize
@@ -69,7 +69,7 @@ popd
 %{_bindir}/python2-futurize
 %{_bindir}/python2-pasteurize
 %doc README.rst docs/_themes/LICENSE LICENSE.txt
-%{python2_sitelib}/%{pypi_name}-%{version}-py?.?.egg-info
+%{python2_sitelib}/%{pypi_name}-%{version}-py*.*.egg-info
 %{python2_sitelib}/%{pypi_name}
 %{python2_sitelib}/past
 %{python2_sitelib}/libfuturize
