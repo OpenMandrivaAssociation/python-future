@@ -2,7 +2,7 @@
 
 Name:           python-future
 Version:	0.18.2
-Release:	4
+Release:	5
 Group:          Development/Python
 Summary:        Clean single-source support for Python 3 and 2
 
